@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
 
+
 function App() {
   const [mounts, setMounts] = useState([])
 
