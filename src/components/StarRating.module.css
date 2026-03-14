@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 24px;
+}
+
+.empty {
+  height: 24px;
+  margin-bottom: 1rem;
+}
+
+.star {
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.container:hover .star {
+  transform: scale(1.1) rotate(5deg);
+}

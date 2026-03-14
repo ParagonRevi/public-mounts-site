@@ -1,0 +1,98 @@
+.wrap {
+  margin-top: 1rem;
+}
+
+.title {
+  margin-bottom: 1rem !important;
+  color: var(--color-text-primary);
+}
+
+.gridShell {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.gridInner {
+  min-width: 100%;
+}
+
+.card {
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  height: 100%;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-focus);
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  margin-bottom: 0.75rem !important;
+  font-size: 0.9375rem !important;
+  color: var(--color-text-primary);
+}
+
+.slider {
+  margin-bottom: 1rem;
+}
+
+.slider :global(.ant-slider-mark-text) {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+
+.desc {
+  font-size: 0.8125rem;
+}
+
+.desc :global(.ant-descriptions-item-label) {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding-right: 0.5rem;
+}
+
+.desc :global(.ant-descriptions-item-content) {
+  color: var(--color-text-primary);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.labelIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.labelIconPlaceholder {
+  width: 18px;
+  height: 18px;
+}
+
+.pos {
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.neg {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0.75rem;
+  }
+
+  .cardTitle {
+    font-size: 0.875rem !important;
+  }
+}

@@ -1,0 +1,53 @@
+.form {
+  margin-bottom: 1.5rem;
+}
+
+.form .ant-form-item {
+  margin-bottom: 0;
+}
+
+.form .ant-form-item-label > label {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.title {
+  margin-bottom: 1rem !important;
+  color: var(--color-text-primary);
+}
+
+.slider {
+  margin-bottom: 1.5rem;
+}
+
+.slider :global(.ant-slider-mark-text) {
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.slider :global(.ant-slider-mark-text-active) {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.slider :global(.ant-slider-rail) {
+  background: var(--color-bg-tertiary);
+}
+
+.slider :global(.ant-slider-track) {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-primary),
+    var(--color-info)
+  ) !important;
+}
+
+@media (max-width: 768px) {
+  .form {
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}

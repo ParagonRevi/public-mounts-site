@@ -1,0 +1,43 @@
+.descriptions {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.breakdown {
+  color: var(--color-text-tertiary);
+}
+
+.legend {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.legend ul {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  list-style: disc;
+}
+
+.legend li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.legend li:last-child {
+  margin-bottom: 0;
+}

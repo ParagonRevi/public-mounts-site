@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--color-bg-primary);
+}
+
+.result {
+  max-width: 500px;
+}
+
+.icon {
+  font-size: 4rem;
+  color: var(--color-error);
+  filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.3));
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+}

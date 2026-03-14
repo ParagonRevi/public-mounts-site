@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--color-bg-primary);
+}
+
+.result {
+  max-width: 500px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 4rem;
+  color: var(--color-warning);
+  filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.3));
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+}

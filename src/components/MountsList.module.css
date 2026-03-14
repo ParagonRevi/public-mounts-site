@@ -1,0 +1,187 @@
+.pageContainer {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+@supports not (
+  (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+) {
+  .mountCardWrap {
+    background: rgba(255, 255, 255, 0.92);
+  }
+  [data-theme='dark'] .mountCardWrap {
+    background: rgba(16, 18, 24, 0.92);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mountCardWrap {
+    transition: none;
+  }
+  .mountCardWrap:hover {
+    transform: none;
+  }
+}
+
+/* внешняя оболочка AntD Card */
+.mountCardWrap {
+  border-radius: 16px;
+  overflow: hidden;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+
+  /* glass общий эффект */
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+
+/* glass (light) */
+[data-theme='light'] .mountCardWrap {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 26px rgba(16, 24, 40, 0.1);
+}
+
+/* glass (dark) */
+[data-theme='dark'] .mountCardWrap {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mountCardWrap:hover {
+  transform: translateY(-2px);
+}
+
+[data-theme='light'] .mountCardWrap:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 44px rgba(16, 24, 40, 0.14);
+}
+
+[data-theme='dark'] .mountCardWrap:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.42);
+}
+
+/* ring + не убиваем базовую тень */
+[data-theme='light'] .mountCardWrap:focus-visible {
+  box-shadow:
+    0 10px 26px rgba(16, 24, 40, 0.1),
+    0 0 0 3px rgba(64, 150, 255, 0.35);
+}
+[data-theme='dark'] .mountCardWrap:focus-visible {
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 3px rgba(64, 150, 255, 0.45);
+}
+
+/* контент */
+.mountCard {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+}
+
+/* картинка слева */
+.thumb {
+  width: 80px;
+  flex: 0 0 80px;
+  aspect-ratio: 1 / 1;
+  align-self: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* правая часть */
+.mountInfo {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.mountName {
+  font-size: 16px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+  color: var(--color-text-primary) !important;
+}
+
+.mountStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin-top: 2px;
+  padding-bottom: 2px;
+}
+
+.mountStat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.mountStat :global(.ant-typography) {
+  color: var(--color-text-primary) !important;
+}
+
+[data-theme='light'] .mountStat {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='dark'] .mountStat {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mountStatIcon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.mountStatIconPlaceholder {
+  width: 16px;
+  height: 16px;
+}
+
+.spinner {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .mountStat {
+    font-size: 10px;
+  }
+  .mountStatIcon {
+    width: 14px;
+    height: 14px;
+  }
+  .pageContainer {
+    padding: 1rem 0.75rem;
+  }
+}
