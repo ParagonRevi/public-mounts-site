@@ -5,6 +5,7 @@ import MountsList from './components/MountsList';
 import MountDetail from './pages/MountDetail';
 import NotFound from './components/NotFound';
 import './App.css';
+import {Analytics} from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
+        <Analytics />
       </BrowserRouter>
     </ThemeProvider>
   );
